@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trump Button</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Key Unlocker</h3>
+        </div>
+        <p class="intro">
+            Tasked to invent a new way to unlock your phone using sensor inputs we created a motion key unlock.
+            It was written in JavaScript and implement using React Native.
+        </p>
+        <a href="https://github.com/muhannadnouri/CPSC_581-Assgn1" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Context</h3>
+        </div>
+        <p class="intro">
+            The goal of this project was to design a unlock mechanism to replace the classic "slide-to-unlock" found on the early generation iPhones.
+            The project imagines unlocking your phone using sensors and physical input.
+            We have implemented a virtual key unlock that requires one to choose a key and complete a wrist twisting motion.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Rough Sketches</h3>
+        </div>
+        <p class="intro" style="margin-bottom: 3rem">
+            There were many sensors available to us via Android and iOS.
+            Many of the ideas focused on the accelerometer which utilized gestures to unlock the phone in many themed ways.
+        </p>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-2.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-2.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-3.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-3.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-4.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-4.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-5.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-5.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-6.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-6.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-7.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-7.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-8.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-8.jpg" alt="k1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Project%201%20-%20Unlock-9.jpg">
+                <img src="assets/img/Project%201%20-%20Unlock-9.jpg" alt="k1" width="300" height="400">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Refined Sketches</h3>
+        </div>
+        <p class="intro" style="margin-bottom: 3rem">
+            We had a lot of fun designing this project. We were tasked to design an unlock using sensors on the phone.
+            We had a lot of ideas for this but landed on the idea with the help of our classmates of unlocking your phone
+            using the accelerometer in order to really focus on the sensor recognition. We wanted to make sure that the
+            feel of unlocking the phone was precise and added our key designs to help prevent accidental unlocks and provide
+            extra security. The design sketches reflected on the idea of unlocking using the correct key among multiple
+            different key designs. Each key would use the same gesture to unlock but would either show a red screen with
+            auditory feedback if the key chosen was incorrect or a green screen with auditory feedback that would eventually
+            locked the phone if correct. Our algorithm checks for the position of the x-axis in order to check whether or
+            not the phone is facing up or down. The audio will play and screen will change once the phone is flipped.
+            The program detects the screen color and will play the correct audio accordingly. If green, the phone will
+            wait for 3 seconds before unlocking your phone. This project was completed by Alexander Lam who wrote the logic and me who
+            created all the assets and designed the interaction. It was implemented using React Native and coded in JavaScript.
+        </p>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-1.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-1.jpg" alt="key1" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-2.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-2.jpg" alt="key2" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-3.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-3.jpg" alt="key3" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-4.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-4.jpg" alt="key4" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-5.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-5.jpg" alt="key5" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/Refined%20-%20Sensory-6.jpg">
+                <img src="assets/img/Refined%20-%20Sensory-6.jpg" alt="key6" width="300" height="400">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Video</h3>
+        </div>
+        <iframe
+                src="https://www.youtube.com/embed/66dUnFTyUtE">
+        </iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

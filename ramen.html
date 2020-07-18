@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ramen Rater</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <a target="_blank" href="https://www.theramenrater.com/">
+            <img class="titlePic" src="assets/img/ramenBoi.jpg" alt="Ramen Boi"></a>
+        <div class="has-text-centered">
+            <h3 class="title2">Ramen Rater</h3>
+        </div>
+        <p class="intro">
+            This was our main project for our data visualization class. We were tasked to find an
+            interesting data set that we wanted to visualize using the D3.js library. We stumbled on
+            this man's data set, where he has rated over 3500 different kinds of ramen for the last
+            18 years. We thought it best to use this one given its size and subject matter. Since it
+            was our first time creating a data visualization we wanted to use a data set that we could
+            fully encapsulate and one that didn't take itself so seriously. We ended up with an
+            interactive dashboard where each section manipulates the others.
+        </p>
+        <a href="https://github.com/a-lmillette/RAMEN" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+
+        <a href="https://docs.google.com/document/d/1zjti0zuRd_WS81A00WOvJxOPhEo0icVLlwZDXWQfXHA/edit?usp=sharing" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem;">
+            Full Write Up</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Interactions</h3>
+        </div>
+        <p class="intro" style="margin-bottom: 3rem">
+            1. Hover on map, tooltip with average rating and country name. <br>
+            2. Single click on map, highlight matching bar on bar chart. <br>
+            3. Double click on map, changes bar chart to average rating per type. <br>
+            4. Hover on sunburst, tooltip with count and information. <br>
+            5. Click on map, change country of data in sunburst.
+        </p>
+
+        <a href="https://a-lmillette.github.io/RAMEN/" class="button6"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-bottom: 3rem">
+            Link to Demo!</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

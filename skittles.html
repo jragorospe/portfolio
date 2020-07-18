@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skittle Sorter</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="nav container void-background">
+        <!-- This "nav-menu" is hidden on mobile -->
+        <!-- Add the modifier "is-active" to display it on mobile -->
+        <div class="nav-left">
+            <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+            </a>
+            <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+            </a>
+            <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+            </a>
+        </div>
+
+        <div class="nav-right nav-menu">
+            <a class="nav-item" href="about.html">About</a>
+            <a class="nav-item" href="index.html">Projects</a>
+            <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+        </div>
+
+        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+        <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+    </nav>
+
+    <section id="about" class="section section-1">
+        <div class="container">
+            <a target="_blank" href="assets/img/skittleSorter.jpg">
+                <img class="titlePic" src="assets/img/skittleSorter.jpg" alt="Skittle Sorter"></a>
+            <div class="has-text-centered">
+                <h3 class="title2">Skittles Sorter</h3>
+            </div>
+            <p class="intro">
+                We were tasked to create hardware based on an Arduino micro-controller with an input sensor and output device.
+                Since we cannot be bothered to manually sort our favorite flavors of Skittles we created a machine to do it for us.
+                Now we can eat the flavor we want and satisfy our OCD. This was implemented using two servo motors, a color sensor
+                all connected to an Arduino Mega.
+            </p>
+            <a href="https://github.com/muhannadnouri/CPSC_581-Assgn2" class="button5"
+               style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+                Github Repository</a>
+        </div>
+    </section>
+
+    <section class="section section-1">
+        <div class="container">
+            <div class="has-text-centered">
+                <h3 class="title2">Context</h3>
+            </div>
+            <p class="intro">
+                For this project we were tasked to design a solution to an everyday problem using an Arduino micro-controller
+                connected to an input sensor and an output device. Our initial thoughts revolved around the idea of creating an
+                alarm based device that would be triggered either through a laser tripwire, proximity sensor, supersonic radar,
+                etc. We then landed on two ideas that we thought would be more interesting and fun then a triggered alarm;
+                a candy sorter and a secret knock lock. We decided on the Skittles sorter because we like candy and we each one
+                of us in our group is just a little OCD. We believed that in this project the WOW factor would require use of simple
+                machines or motors as a simple sensor and alarm or light would be too simple. Once we agreed on a concept, we headed
+                to work on asset creation and calibration of the color sensor. We picked up a sensor from SolarBotics and headed to work.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-1">
+        <div class="container">
+            <div class="has-text-centered">
+                <h3 class="title2">Rough Sketches</h3>
+            </div>
+            <p class="intro" style="margin-bottom: 3rem">
+                As stated earlier our early ideation revolved around simple alarm based devices that would be triggered through
+                various input sensors. We strayed away from that idea as we thought it would be extremely boring or simple. The ideas
+                that we found most interesting involved the use of a motor and simple machines to act more on the side of automation or
+                machinery rather than a simple notification box. We landed on two ideas - the secret knock unlock and skittles sorter - and
+                decided on the sorter since the task completed was the most interesting and we could eat it too.
+            </p>
+
+            <div class="gallery">
+                <a target="_blank" href="assets/img/ss1.jpg">
+                    <img src="assets/img/ss1.jpg" alt="ss1" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss2.jpg">
+                    <img src="assets/img/ss2.jpg" alt="ss2" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss3.jpg">
+                    <img src="assets/img/ss3.jpg" alt="ss3" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss4.jpg">
+                    <img src="assets/img/ss4.jpg" alt="ss4" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss5.jpg">
+                    <img src="assets/img/ss5.jpg" alt="ss5" width="300" height="400">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-1">
+        <div class="container">
+            <div class="has-text-centered">
+                <h3 class="title2">Refined Sketches</h3>
+            </div>
+            <p class="intro" style="margin-bottom: 3rem">
+                To settle the age old debate on which Skittle flavor is the best we decided to carry on with this concept.
+                To be able to use a sensor not offered in class was another big motivation as we could ensure that our project
+                was different from the rest. Understanding how to use the Arduino had a learning curve as someone who is not
+                versed in hardware might have an issue finding out which wires go where and what pins connected to what but
+                after some trial and error we were able to succeed in getting the color sensor to read the RGB values. The
+                majority of the project's difficulty actually came in making and aligning the chassis in which the motors and
+                the sensor would be housed. We painted the feed that moved the Skittles in front of the sensor black as we found
+                that the white light that reflected into the sensor was too prominent in the readings. Calibration of the colors
+                was a bit difficult as well as we found that Red, Green and Orange had similar RGB values and the sensor wasn't
+                consistent enough to narrow the values in tighter conditional statements. We did however manage to get it working with 95% accuracy.
+            </p>
+
+            <div class="gallery">
+                <a target="_blank" href="assets/img/ss6.jpg">
+                    <img src="assets/img/ss6.jpg" alt="ss6" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss7.jpg">
+                    <img src="assets/img/ss7.jpg" alt="ss7" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss8.jpg">
+                    <img src="assets/img/ss8.jpg" alt="ss8" width="300" height="400">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-1">
+        <div class="container">
+            <div class="has-text-centered">
+                <h3 class="title2">Final Product</h3>
+            </div>
+            <p class="intro" style="margin-bottom: 3rem">
+                The final product is definitely a prototype but the concept is there and the sensor is accurate
+                enough to sort a bag of Skittles. Further implementation for this color sorter would be to add a larger
+                capacity driver/feeder, calibrate the sensor to deal with more colors or different candies (Smarties)
+                and house the sensor to ensure color accuracy. Each one of us dealt with a little bit of everything
+                where my focus was dealing with the housing the components, creation of the chassis and
+                calibration of the sensor.
+            </p>
+
+            <div class="gallery">
+                <a target="_blank" href="assets/img/skittleSorter.jpg">
+                    <img src="assets/img/skittleSorter.jpg" alt="Skittle Sorter" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss9.jpg">
+                    <img src="assets/img/ss9.jpg" alt="ss9" width="300" height="400">
+                </a>
+
+
+                <a target="_blank" href="assets/img/ss10.jpg">
+                    <img src="assets/img/ss10.jpg" alt="ss10" width="300" height="400">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-1">
+        <div class="container">
+            <div class="has-text-centered">
+                <h3 class="title2">Video</h3>
+            </div>
+            <iframe
+                    src="https://www.youtube.com/embed/gAhMmshp7jQ">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="section-4 has-text-centered container">
+    </section>
+
+    <!-- Scripts  -->
+    <script src="controller.js"></script>
+</body>
+</html>

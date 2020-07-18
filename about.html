@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 70%;
+        margin: 5rem auto;
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 6 / 3;
+        margin: 0 auto;
+    }
+    .div2 {
+        grid-area: 1 / 3 / 6 / 6;
+        margin: 0 auto auto 2rem;
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .parent {
+            display: flow;
+        }
+        .div1 {
+            width: 80%;
+            margin: 2rem auto;
+        }
+        .div2 {
+            text-align: justify;
+            width: 80%;
+            margin: 0 auto 4rem auto;
+            font-size: 15px;
+        }
+        .profilePic {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+</style>
+<head>
+    <title>Joseph Gorospe - About</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-linkedin-square"></i>
+					</span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-envelope"></i>
+					</span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+</nav>
+
+<div class="parent">
+    <div class="div1">
+        <a target="_blank" href="assets/img/Jump.jpeg">
+            <img class="profilePic" src="assets/img/Jump.jpeg" alt="Profile">
+        </a>
+    </div>
+    <div class="div2">
+    <p>
+        Hi, I'm Joseph. <br><br>
+        I'm a recent BSc Computer Science graduate from the University of Calgary. I specialized in
+        Human Computer Interaction because I've always wanted to explore new ways to interact with technology
+        and push for innovation in a creative way. Subdisciplines of HCI that are of interest to me are VR/AR, User Experience design/research,
+        STEM education, 3D modelling, data visualization and tangible user interfaces (Arduino).
+        <br><br>
+        I am passionate about serving others and exploring ways to act intentionally and sustainably with our lives.
+        I also love exploring the ways that people think and the logic behind their actions through the study of
+        philosophy, psychology and design. As the growth of new technologies exponentially rise, I believe the
+        study and consideration of ethical, intentional use is something not to be overlooked.
+        <br><br>
+        In my spare time I love bouldering, road cycling, hiking and playing Smash Ultimate. I also have a passion for
+        cooking and believe it is the most effective way to serve others. I am also a volunteer musician at Center Street
+        Church, playing the trombone for the orchestra as well as singing solos on occasion for their seasonal concerts.
+        I look forward to seeing what Calgary will do in the technology sector in the years to come and hope to be
+        apart of a positive shift in the future.
+    </p>
+    </div>
+</div>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

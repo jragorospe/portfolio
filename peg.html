@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peg Solitaire Solver</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <a target="_blank" href="assets/img/moodSlippers.jpg">
+            <img class="titlePic" src="assets/img/peg.jpg" alt="Peg Solitaire"></a>
+        <div class="has-text-centered">
+            <h3 class="title2">Peg Solitaire Solver</h3>
+        </div>
+        <p class="intro">
+            This was a project made for my Programming Paradigms class where we were learning how to use
+            functional programming languages (Haskell and Prolog). Functional programming is a programming paradigm where
+            programs are constructed by applying and composing functions. Each function is treated like a value, it
+            returns something back and you cannot store mutable data in them. This style of programming allows
+            for very transparent, intentional outputs, storing only what is necessary.
+            <br><br>
+            Prolog is a logic based programming language, known for its role in AI. Prolog is intended primarily as a
+            declarative programming language meaning its logic is expressed as a set of Facts and Rules. Prolog is
+            fantastic when you know where to start and where to end but don't know how to bridge the gap. In the case
+            of Peg Solitaire we know the start board and the final position but we don't know the moves to get there.
+            <br><br>
+            <iframe
+                    src="https://www.youtube.com/embed/qTOhdAHP05s">
+            </iframe>
+            <br><br>
+            In this program, after setting up the Rules and the Facts, we use brute force to find out all the possible
+            sets of moves that can lead to a completed board. This, however is not enough as it would take forever given
+            the sheer number of possible moves that can be taken. We take it a step further and use independent checks to make
+            sure we aren't backtracking. How this is done is we keep a log of moves already made and make sure we don't take
+            moves in the log. Once we find an overlap (matching move), we terminate the attempt and go to the next one.
+            This alone cuts the process significantly, solving the main board in minutes. Next we use Pagoda
+            Predicates. This is adding "weights" to certain positions on the board that are more favourable/unfavourable to take.
+            When the program decides to make a jump (move) it will avoid negative weights and favour higher valued positions.
+            With this we can solve the full board in 3 seconds.
+        </p>
+        <a href="https://github.com/jragorospe/pegSolitaireSolver" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Screenshots</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/full1.png">
+                <img src="assets/img/full1.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/full2.png">
+                <img src="assets/img/full2.png" alt="m7" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/crossbow1.png">
+                <img src="assets/img/crossbow1.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/crossbow2.png">
+                <img src="assets/img/crossbow2.png" alt="m7" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/longbow1.png">
+                <img src="assets/img/longbow1.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/longbow2.png">
+                <img src="assets/img/longbow2.png" alt="m7" width="450" height="300">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

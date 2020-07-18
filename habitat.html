@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit-at Tracker</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <a target="_blank" href="assets/img/Setup.jpg">
+            <img class="titlePic" src="assets/img/Setup.jpg" alt="Habit-at Tracker"></a>
+        <div class="has-text-centered">
+            <h3 class="title2">Habit-at Tracker</h3>
+        </div>
+        <p class="intro">
+            For this assignment, we were tasked to take personal data and represent it using physical visualization.
+            We initially had issues with understanding what personal data was and our only understanding of data
+            visualization has been in the digital medium where manipulability, responsiveness and setup were more
+            familiar and cost effective. Our understanding of the benefits to data visualization was education through
+            touch and scale, usually through static grand displays or machine-independent interactions. Since our
+            project needed to be dynamic our other issue was communicating with Arduino in real time. We thought that
+            if the Arduino were to take in a data set (array/CSV), it would be no different than hard coding behaviors.
+            <br><br>
+            So we played around with a couple ideas more akin to traditional visualizations. We knew we wanted to work
+            with water in some way so the first thought was a bar graph that filled and decreased based on your budget.
+            The difficulty with water came with sealing the tubes and working against gravity. There were options for
+            smaller, 5V pumps but we found that even though the Arduino could power it, it wasn't powerful enough for
+            our needs. We then decided on a due date app that had cups of water with lights in them that changed due
+            to the closeness of a due date. The lights would be covered with a "fire" display and they would be put out
+            by our pump that was attached to a servo motor. We found that wiring it would be an issue and that the water
+            would not play a role other than giving a fun visualization. We then decided on the Habit-at Tracker.
+        </p>
+        <a href="https://github.com/jragorospe/habit-at-tracker" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Inspiration</h3>
+        </div>
+        <p class="intro">
+            Our inspiration was a little lacking since physicalization is a little less common due to its difficulty
+            and cost. We were inspired to use water from Charles Sowers, Tidal Memory display where he has multiple
+            tubes of water and light to display a dynamic scale. We tried implementing this with a two tubes but ended
+            ditching the idea due to fabrication issues and inability to polish the final product.
+            <br><br>
+            <u><a href="https://www.charlessowers.com/tidal-memory">Charles Sowers</a></u>
+            <br><br>
+            After receiving permission to do the plant based visualization we were also given a paper that did exactly
+            what we wanted to do. The implementations were very similar and inspired but the key take away from the
+            paper was the understanding of the limitations of physicalizations and the motivation from that to use
+            plants as a dynamic, motivating medium.
+            <br><br>
+            <u><a href="https://dl.acm.org/doi/10.1145/2909132.2909267">Go and Grow</a></u>
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Final Idea</h3>
+        </div>
+        <p class="intro">
+            The structure of the machine was very similar to the due date machine. The machine consist of an
+            Arduino Uno, a relay, 12V pump, a micro servo, an external 12V power supply and a Processing App to
+            communicate to the Serial Port in the Arduino IDE to send instructions to the micro controller. We liked
+            this idea more since the water actually played a crucial role. If you didn't follow through with your
+            habits, you would see the change in the health of you plants. We found that this was a powerful
+            visualization and a different interpretation that couldn't be found in the digital medium. Different
+            plants could also represent different habits too. Say you have a more resilient plant like a cactus,
+            that could represent less crucial habits like practicing programming (once a week) or stretching. Then
+            you could have more delicate flowers like lilies, daisies, roses that would have a faster and more dramatic
+            change to them if habits were not followed (no watering). There is further interaction to this other than
+            the digital and the machine which we really liked. There was definitely a big learning curve, from
+            understanding circuit diagrams, wiring, relays, voltage capacity and especially communication to the
+            Arduino using Processing.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Sketches</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/h1.jpg">
+                <img src="assets/img/h1.jpg" alt="h1" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h2.png">
+                <img src="assets/img/h2.png" alt="h2" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h3.png">
+                <img src="assets/img/h3.png" alt="h3" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h4.png">
+                <img src="assets/img/h4.png" alt="h4" width="300" height="400">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Final Product</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/h5.jpg">
+                <img src="assets/img/h5.jpg" alt="h5" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h6.jpg">
+                <img src="assets/img/h6.jpg" alt="h6" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h7.jpg">
+                <img src="assets/img/h7.jpg" alt="h7" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/h8.jpg">
+                <img src="assets/img/h8.jpg" alt="h8" width="300" height="400">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Video</h3>
+            <iframe src="https://www.youtube.com/embed/oqTTi_qvkGo"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

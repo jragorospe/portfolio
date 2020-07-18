@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect 4</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Connect 4</h3>
+        </div>
+        <p class="intro">
+            Tasked to convert a classic board game into an online multiplayer experience I chose Connect 4.
+            I used Node.js and Socket.IO for real time communication and their Rooms feature. Consequently, I didn't
+            have to use a different language to write the backend and stuck with HTML, CSS and Javascript to
+            write the entire thing.
+        </p>
+        <a href="https://github.com/jragorospe/Connect4" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Context</h3>
+        </div>
+        <p class="intro">
+            For my Web Development class we were pushed to learn Node.js for backend development. In conjunction
+            with Node.js, we learned Socket.IO. Socket.IO was excellent as it is the library that is used for all .IO games
+            for its bi-directional communication in real time and has many additional feature that bare bones web sockets
+            don't like Rooms. We had many requirements for this project; assign new players a name, remember it through
+            cookies, allow players to create their own matches (rooms), allow players to join existing rooms via a
+            room code or joining a random open room, and giving players the ability to choose different colour themes. All
+            of these were met and the game can be downloaded and tested via the Github repository. The node dependencies
+            need to be downloaded before you can test it locally.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Gallery</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/c4Title.png">
+                <img src="assets/img/c4Title.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/c4Title2.png">
+                <img src="assets/img/c4Title2.png" alt="m7" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/c4Multiplayer.png">
+                <img src="assets/img/c4Multiplayer.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/c4Multiplayer2.png">
+                <img src="assets/img/c4Multiplayer2.png" alt="m7" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/c4Multiplayer3.png">
+                <img src="assets/img/c4Multiplayer3.png" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/c4Terminal.png">
+                <img src="assets/img/c4Terminal.png" alt="m7" width="450" height="300">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>

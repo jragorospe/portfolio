@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Slippers</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <a target="_blank" href="assets/img/moodSlippers.jpg">
+            <img class="titlePic" src="assets/img/moodSlippers.jpg" alt="Mood Slippers"></a>
+        <div class="has-text-centered">
+            <h3 class="title2">Mood Slippers</h3>
+        </div>
+        <p class="intro">
+            For this final project we were tasked to create a wearable that portrayed the idea of Hygge and embodied
+            everything we had learned from the course. I found that the ideation for this project was the most
+            difficult from everything else we have done. My understanding was that electronics/tech was incompatible
+            with Hygge so creating ideas was tough. In order to really start ideation, Hygge really needed to be understood.
+            <br><br>
+            So what is Hygge? Hygge cannot be easily defined. Definition range from “the art of creating intimacy,”
+            to “coziness of the soul.” Most Danish people will agree that Hygge is simply something you know when you
+            feel it; it’s togetherness, relaxation, coziness and comfort. To me, Hygge seems to be a state of being,
+            whether it be with self, others or environment. Hygge is not stuff, it's momentary peace created by your
+            environment, other people or doing what you love.
+            <br><br>
+            There were three very intentional things that I wanted to implement in this project; wireless
+            communication, minimal embodiment and environment manipulation. So I ended up making Mood Slippers.
+            When you slip the slippers on it triggers events in your house to create a cozy environment for you.
+            The idea is that after a long day you come home and slip into something comfortable and the environment
+            does too. The Mood Slippers in particular pour you a glass of wine, turn on some mood lighting (lamp)
+            and plays lofi hip-hop on your Chromecast. This gets you ready to relax and unwind with a nice book or
+            for you to simply enjoy the music.
+        </p>
+        <a href="https://github.com/jragorospe/599-Final" class="button5"
+           style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+            Github Repository</a>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Inspiration</h3>
+        </div>
+        <p class="intro">
+            My inspiration is smart homes. Like I stated before, Hygge with electronics doesn't mix well in
+            my head so it acting as a simple controller opened up a world of possibilities when it came to
+            home automation. During this time of isolation, taking advantage of being at home and making
+            the project for the space was great too and opens up the potential to continue home automation
+            in the future. There was no specific project that inspired this idea, more so the idea of home
+            automation in general.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Final Idea</h3>
+        </div>
+        <p class="intro">
+            As stated before there were three very intentional things that I wanted to implement in this project;
+            wireless communication, minimal embodiment and environment manipulation. If I was forced to create a
+            wearable that had a cozy aesthetic the technology should be very discreet in the embodiment. There were
+            ideas of creating a blanket the turned into a fort with mechanical arms or socks that warmed and massaged
+            your foot but to me there was too much "noise" that it would distract (me) the user when wearing it taking
+            away from the idea of Hygge. This also plays with the idea of wireless communication. If the wearable was
+            the thing to do stuff then the embodiment would be super complex or limited to simple things like lights,
+            sounds and small moving parts. I wanted the wearable to act as a remote that triggered events in your
+            house essentially turning your house into a smart house but without the government/big tech surveillance.
+            Mood Slippers was my solution to this. When you slip the slippers on it triggers events in your house to
+            create a cozy environment for you. The idea is that after a long day you come home and slip into something
+            comfortable and the environment does too. The Mood Slippers in particular pour you a glass of wine, turn
+            on some mood lighting (lamp) and plays lofi hip-hop on your Chromecast. This gets you ready to relax and
+            unwind with a nice book or for you to simply enjoy the music.
+            <br><br>
+            The project is broken down into to sides, the transmitter end - the slippers - and, the receiver end -
+            the smart plug, pump and Python script. The slippers are very simple, they are powered by a simple 9V
+            battery to allow for portability and houses a simple button that transmits a signal to a shared serial
+            port. The receiver end is a bit more complicated. Attached to the receiver's breadboard is a smart plug.
+            This is a reassembled power outlet that house a relay that is set to NO (normally on). You can control it
+            to enable power to whatever is plugged in. This has more uses than just this project and will be utilized
+            at home for personal use. Then we have a pump that pours you a glass of wine. This is rewired into a relay
+            that is also set to NO. We can specify the delay before turning the pump off (LOW) to pour the perfect
+            amount of wine. Lastly is the Python script that casts a Youtube video to your Chromecast. I used two
+            python libraries that allowed for casting and serial communication. I set the serial port to the same one
+            as the receiver and transmitter since you can only have one serial port open at a time without the use of
+            eternal libraries. A python script runs in the background and waits for the signal. Once the signal
+            is received (the same one for everthing else) the Youtube Controller casts the specified link to the Chromecast.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Sketches</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/m3.png">
+                <img src="assets/img/m3.png" alt="m3" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m4.png">
+                <img src="assets/img/m4.png" alt="m4" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/m5.png">
+                <img src="assets/img/m5.png" alt="m5" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m6.png">
+                <img src="assets/img/m6.png" alt="m6" width="300" height="400">
+            </a>
+
+            <a target="_blank" href="assets/img/m1.png">
+                <img src="assets/img/m1.png" alt="m1" width="300" height="400">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m2.png">
+                <img src="assets/img/m2.png" alt="m2" width="300" height="400">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Final Product</h3>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="assets/img/m7.jpg">
+                <img src="assets/img/m7.jpg" alt="m7" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m8.jpg">
+                <img src="assets/img/m8.jpg" alt="m8" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m9.jpg">
+                <img src="assets/img/m9.jpg" alt="m9" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/m10.jpg">
+                <img src="assets/img/m10.jpg" alt="m10" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m11.jpg">
+                <img src="assets/img/m11.jpg" alt="m11" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/m12.jpg">
+                <img src="assets/img/m12.jpg" alt="m12" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m13.jpg">
+                <img src="assets/img/m13.jpg" alt="m13" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m14.jpg">
+                <img src="assets/img/m14.jpg" alt="m14" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m15.jpg">
+                <img src="assets/img/m15.jpg" alt="m15" width="450" height="300">
+            </a>
+
+            <a target="_blank" href="assets/img/m16.jpg">
+                <img src="assets/img/m16.jpg" alt="m16" width="450" height="300">
+            </a>
+
+
+            <a target="_blank" href="assets/img/m17.jpg">
+                <img src="assets/img/m17.jpg" alt="m17" width="450" height="300">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Video</h3>
+            <iframe src="https://www.youtube.com/embed/IJDr1rCRzkE"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>
