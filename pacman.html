@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacman RTS Demo</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="nav container void-background">
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-left">
+        <a href="https://www.linkedin.com/in/joseph-gorospe-988201198/" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-linkedin-square"></i>
+                        </span>
+        </a>
+        <a href="https://github.com/jragorospe" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+        </a>
+        <a href="mailto:jragorspe@gmail.com" class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+        </a>
+    </div>
+
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="index.html">Projects</a>
+        <a class="nav-item" href="assets/Resume.pdf">Resume</a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+</nav>
+
+<section id="about" class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Pacman RTS Demo</h3>
+        </div>
+        <p class="intro">
+            Been playing around with Unity for the past couple months and decided to tackle something a bit more difficult
+            for my second "complete" prototype. The Real Time Strategy (RTS) genre has been less popular in this generation
+            of games, not only for players but developers as well. It is considered to be one of the more difficult genres
+            to develop for since the programming is a lot more math and algorithm heavy (unit types, pathfinding, AI). I
+            wanted to program the basic camera controls, unit behaviours and basic enemy types in this personal project and
+            with the suite of tools available in Unity, I was able to create a small mini-game.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">About</h3>
+        </div>
+        <p class="intro">
+            Every good game starts with solid planning and a design document. I needed to identify what was essential in a
+            RTS game. Since I have not played too many RTS games myself I needed to see what the industry standards were through
+            the genre's most popular titles: Starcraft 2, Warcraft 3, Command and Conquer, Sim City, etc. So I created a list
+            of needs to secure the feel of an RTS game and built my game idea on top of the essentials...
+            <br><br>Orbital World Camera - RTSs live and die by their camera. We want a camera that you can control with the keyboard and mouse that rotates around the center of focus. We also need to make sure that when units and objects are selected, the player can choose to snap the camera to focus and follow when necessary.
+            <br><br>Click/Box Selector - this is going to be the most difficult thing to do. RTS have single click and box selection options. Single click is easy but box selection, depending on how you want it done, is difficult. In a 3D game we can either create a box that selects anything in its area. This is janky since we are looking on an angle and the world is usually at a 45 degree rotation. What we really want is the ability to drag on the screen and have a box be drawn in the UI rather than spawn GameObject in 3D space. This will be done using a RayCast technique and a lot of math. By using Rays we can find the 4 points that indicate the corners of the box we create and then create the geometry necessary to grab selectable units. The points then create a box and by identifying the triangles in the box we can create a mesh which Unity recognizes as a shape. We want to be able to select more than one thing so we keep the selected units in a dictionary, adding and removing when necessary. Deselecting will be handled by clicking on a layer that is not selectable (ie. Ground).
+            <br><br>Pathfinding - this one may be difficult depending on what Unity has to offer. To start we will use Unity’s NavMesh tool to set which surfaces the player can travel on. Then we will implement a pathfinding algorithm (Dykstra’s, FlowField, etc.) to have units optimally move through the environment.
+            <br><br>Unit/Selection Indicator - when a unit is selected there must be a clear indication that it is. We also need to differentiate when we select a friendly or enemy unit. We will use green and red rings similar to Warcraft 3. Other colors of rings can be added to indicate different additional states.
+            <br><br>
+            After identifying the essentials I got to work implementing these things and building on top of the main tools. I added a basic
+            enemy turret, main menu and pause menu. I used a lot of Unity's built in tools to create various things for the game: particle system for confetti effect,
+            ProBuilder for the Pacman Maze, NavMesh for pathfinding, and TextMeshPro for UI elements.
+        </p>
+    </div>
+</section>
+
+<section class="section section-1">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="title2">Video</h3>
+        </div>
+        <iframe
+                src="https://www.youtube.com/embed/O047JSlQLFE">
+        </iframe>
+    </div>
+</section>
+
+<a href="https://drive.google.com/file/d/11eBpHgk4SZ9r87A_sOnoz4hqeyHci39Q/view?usp=sharing" class="button5"
+   style="
+           display: block;
+	       margin-left: auto;
+	       margin-right: auto;
+	       width: 180px;
+           margin-top: 3rem">
+    Download Game</a>
+
+
+<!-- Footer -->
+<section class="section-4 has-text-centered container">
+</section>
+
+<!-- Scripts  -->
+<script src="controller.js"></script>
+</body>
+</html>
